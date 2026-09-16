@@ -1,0 +1,2 @@
+# Local_Grocery_Delivery_Co_Op_for_Small_Farms
+Automated website repository for Local_Grocery_Delivery_Co_Op_for_Small_Farms
