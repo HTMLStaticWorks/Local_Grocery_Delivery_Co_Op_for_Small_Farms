@@ -4340,3 +4340,46 @@ tbody tr:last-child td {
 .box-items .card p {
   min-height: 3.3em;
 }
+/* ---------- Three-card grids: 3 cols ≥1024, 2 + centered 1 at tablet, stacked on mobile ---------- */
+.grid-3,
+.steps,
+.testimonial-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1023px) {
+  .grid-3,
+  .steps,
+  .testimonial-grid--3 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-3> *,
+  .steps> *,
+  .testimonial-grid--3> * {
+    grid-column: span 2;
+  }
+
+  .grid-3> :nth-child(3):last-child,
+  .steps> :nth-child(3):last-child,
+  .testimonial-grid--3> :nth-child(3):last-child {
+    grid-column: 2 / span 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid-3,
+  .steps,
+  .testimonial-grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3> *,
+  .steps> *,
+  .testimonial-grid--3> *,
+  .grid-3> :nth-child(3):last-child,
+  .steps> :nth-child(3):last-child,
+  .testimonial-grid--3> :nth-child(3):last-child {
+    grid-column: auto;
+  }
+}

@@ -261,15 +261,13 @@ function initSeasonCalendar() {
   const cal = document.querySelector('[data-season-calendar]');
   if (!cal) return;
 
-  const img = q => `https://images.unsplash.com/photo-${q}?q=80&w=900&auto=format&fit=crop`;
   const monthNames = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
 
   const seasons = {
     spring: {
-      eyebrow: 'March – May',
       title: 'Tender & green',
       desc: 'The first shoots of the year. Crisp, delicate and full of life after the long winter.',
-      img: img('1595814436220-410a08e6af9e'),
+      img: 'assets/images/season-spring.jpg',
       months: [2, 3, 4],
       produce: [
         { emoji: '🌱', name: 'Pea Shoots', farm: 'Urban Roots Co.', peak: 92, note: 'Grown in living soil trays and cut the morning of delivery for maximum sweetness.' },
@@ -281,10 +279,9 @@ function initSeasonCalendar() {
       ]
     },
     summer: {
-      eyebrow: 'June – August',
       title: 'Sun-ripened abundance',
       desc: 'Long days mean peak sugar. Our boxes are at their most colorful and generous.',
-      img: img('1542838132-92c53300491e'),
+      img: 'assets/images/season-summer.jpg',
       months: [5, 6, 7],
       produce: [
         { emoji: '🍅', name: 'Heirloom Tomatoes', farm: 'Green Valley Acres', peak: 98, note: 'Twelve varieties, vine-ripened and never refrigerated to protect flavor.' },
@@ -296,10 +293,9 @@ function initSeasonCalendar() {
       ]
     },
     autumn: {
-      eyebrow: 'September – November',
       title: 'Harvest season',
       desc: 'Orchards are heavy and root cellars are filling. Warm, hearty and deeply flavorful.',
-      img: img('1589923188900-85dae523342b'),
+      img: 'assets/images/season-autumn.jpg',
       months: [8, 9, 10],
       produce: [
         { emoji: '🍎', name: 'Fuji Apples', farm: 'Sunrise Orchard', peak: 96, note: 'Picked at full color from 60-year-old trees. Crisp, honey-sweet and great for pies.' },
@@ -311,10 +307,9 @@ function initSeasonCalendar() {
       ]
     },
     winter: {
-      eyebrow: 'December – February',
       title: 'Roots & storage crops',
       desc: 'Cellar-kept roots, greenhouse greens and citrus from partner growers keep boxes vibrant.',
-      img: img('1518977676601-b53f82aba655'),
+      img: 'assets/images/season-winter.jpg',
       months: [11, 0, 1],
       produce: [
         { emoji: '🥕', name: 'Storage Carrots', farm: 'Green Valley Acres', peak: 86, note: 'Stored in sand at 34°F, which makes them sweeter than summer carrots.' },
@@ -370,7 +365,6 @@ function initSeasonCalendar() {
       heroImg.alt = `${key} harvest`;
       hero.classList.remove('is-switching');
     }, 250);
-    cal.querySelector('[data-season-eyebrow]').textContent = s.eyebrow;
     cal.querySelector('[data-season-title]').textContent = s.title;
     cal.querySelector('[data-season-desc]').textContent = s.desc;
     monthsEl.innerHTML = monthNames.map((n, i) => `<span class="${s.months.includes(i) ? 'on' : ''}">${n}</span>`).join('');
