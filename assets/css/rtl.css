@@ -1,0 +1,27 @@
+/* rtl.css
+   Most layout flips automatically because style.css uses logical properties
+   (e.g., margin-inline, inset-inline, padding-inline).
+   This file handles exceptions where specific physical direction overrides are needed.
+*/
+
+html[dir="rtl"], body.rtl {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Fix icon button rotation if needed */
+html[dir="rtl"] .ph-arrow-right, body.rtl .ph-arrow-right {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .ph-caret-right, body.rtl .ph-caret-right {
+  transform: scaleX(-1);
+}
+
+/* Explicit flip for specific elements if logical properties missed */
+html[dir="rtl"] .hero-overlay, body.rtl .hero-overlay {
+  background:
+    linear-gradient(180deg, rgba(8, 16, 11, 0.55) 0%, rgba(8, 16, 11, 0.1) 35%, rgba(8, 16, 11, 0.82) 100%),
+    linear-gradient(270deg, rgba(8, 16, 11, 0.55) 0%, rgba(8, 16, 11, 0) 70%);
+}
+
+html[dir="rtl"] .marquee-item i { transform: none; }

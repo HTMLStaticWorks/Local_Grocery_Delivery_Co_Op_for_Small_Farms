@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmCircle - Home 2</title>
+  <meta name="description" content="Fresh, local farm-to-table groceries delivered weekly.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <i class="ph ph-plant"></i> FarmCircle
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="home2.html">Home 2</a>
+        <a href="this-weeks-box.html">This Week's Box</a>
+        <a href="farms.html">Farms We Partner With</a>
+        <a href="subscription-plans.html">Subscription</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode"><i class="ph ph-moon"></i></button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+        <a href="login.html" class="btn btn-primary auth-link desktop-auth">Login</a>
+      </div>
+
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer-overlay"></div>
+
+  <aside class="nav-drawer">
+    <a href="index.html" class="nav-logo drawer-logo"><i class="ph ph-plant"></i> FarmCircle</a>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="this-weeks-box.html">This Week's Box</a>
+      <a href="farms.html">Farms We Partner With</a>
+      <a href="subscription-plans.html">Subscription</a>
+      <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+    <div class="drawer-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode"><i class="ph ph-moon"></i></button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button>
+      <a href="login.html" class="btn btn-primary auth-link drawer-login">Login</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Split Hero -->
+    <section class="hero-2">
+      <div class="container">
+        <div class="hero-2-grid">
+          <div class="hero-2-content animate-fade-up">
+            <span class="eyebrow">Community-supported agriculture</span>
+            <h1>Real food, <br><em>real farmers.</em></h1>
+            <p class="lead-text">Experience the season's best harvest, grown right in your region by people you can name, and delivered to your doorstep.</p>
+            <div class="hero-actions">
+              <a href="subscription-plans.html" class="btn btn-primary btn-lg">Join the Co-Op <i class="ph ph-arrow-right"></i></a>
+              <a href="#harvest-calendar" class="btn btn-secondary btn-lg">What's in Season</a>
+            </div>
+            <div class="avatar-row">
+              <div class="avatar-stack">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop" alt="">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop" alt="">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop" alt="">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=100&auto=format&fit=crop" alt="">
+              </div>
+              <p><strong>1,850+ households</strong><br>eating local this week</p>
+            </div>
+          </div>
+          <div class="hero-2-visual animate-fade-up delay-200">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=900&auto=format&fit=crop" alt="Basket of fresh produce" class="hero-2-floating-img" style="width: 78%; height: 78%; inset-inline-end: 0; top: 0;">
+            <img src="https://images.unsplash.com/photo-1615485925600-97237c4fc1ec?q=80&w=600&auto=format&fit=crop" alt="Farmer in field" class="hero-2-floating-img delay-200" style="width: 52%; height: 50%; inset-inline-start: 0; bottom: 0; border: 8px solid var(--color-bg);">
+            <div class="hero-2-chip" style="top: 12%; inset-inline-start: 2%;">
+              <i class="ph-fill ph-leaf"></i>
+              <div><strong>100% Organic</strong><span>Certified growers</span></div>
+            </div>
+            <div class="hero-2-chip" style="bottom: 8%; inset-inline-end: 4%; animation-delay: -4s;">
+              <i class="ph-fill ph-truck" style="background: var(--color-secondary); color: #fff;"></i>
+              <div><strong>Picked Tuesday</strong><span>At your door Thursday</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (Alternative Layout) -->
+    <section class="container">
+      <div class="split">
+        <div class="split-media reveal">
+          <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?q=80&w=900&auto=format&fit=crop" alt="Fresh seasonal vegetables">
+          <div class="glass-card">
+            <div style="display: flex; align-items: center; gap: var(--space-3);">
+              <span class="live-dot"></span>
+              <p style="color: #fff; font-size: 0.925rem;">This week: <strong>312 boxes</strong> packed by 14 farms</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal delay-100 split-copy">
+          <span class="eyebrow">The process</span>
+          <h2>From soil <em>to plate</em></h2>
+          <p class="lead-text" style="margin-block-start: var(--space-3);">A simple, transparent loop between you and the people who grow your food.</p>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-num">01</span>
+              <div>
+                <h3>Subscribe</h3>
+                <p>Select your box size based on your household. Pause or skip anytime.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-num">02</span>
+              <div>
+                <h3>Customize</h3>
+                <p>Swap items weekly to fit your recipes and dietary needs.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-num">03</span>
+              <div>
+                <h3>Enjoy</h3>
+                <p>Fresh, nutrient-dense food delivered in zero-plastic packaging.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive: Seasonal Harvest Calendar -->
+    <section class="section-alt" id="harvest-calendar">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Interactive</span>
+          <h2>The harvest <em>calendar</em></h2>
+          <p>Pick a season to explore what our farms are growing, then tap any crop to see how it's grown and when it peaks.</p>
+        </div>
+
+        <div data-season-calendar class="reveal">
+          <div class="season-tabs-wrap">
+            <div class="season-tabs" role="tablist" aria-label="Seasons">
+              <button class="season-tab" role="tab" aria-selected="false" data-season="spring">🌱 Spring</button>
+              <button class="season-tab" role="tab" aria-selected="false" data-season="summer">☀️ Summer</button>
+              <button class="season-tab" role="tab" aria-selected="false" data-season="autumn">🍂 Autumn</button>
+              <button class="season-tab" role="tab" aria-selected="false" data-season="winter">❄️ Winter</button>
+            </div>
+          </div>
+
+          <div class="season-stage">
+            <div class="season-hero" data-season-hero>
+              <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=900&auto=format&fit=crop" alt="Seasonal harvest" data-season-img>
+              <div class="season-hero-body">
+                <span class="eyebrow" data-season-eyebrow></span>
+                <h3 data-season-title></h3>
+                <p data-season-desc></p>
+                <div class="season-months" data-season-months></div>
+              </div>
+            </div>
+            <div class="produce-grid" role="tabpanel" data-season-grid></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- This Week's Box Preview (List Style) -->
+    <section class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">This week</span>
+        <h2>Inside this week's box</h2>
+      </div>
+      <div class="box-list">
+        <div class="box-row reveal">
+          <div class="box-row-main">
+            <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=160&auto=format&fit=crop" alt="Potatoes">
+            <div>
+              <h4>Heirloom Potatoes</h4>
+              <small>Green Valley Acres</small>
+            </div>
+          </div>
+          <span class="badge badge-secondary">2 lbs</span>
+        </div>
+        <div class="box-row reveal delay-100">
+          <div class="box-row-main">
+            <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=160&auto=format&fit=crop" alt="Carrots">
+            <div>
+              <h4>Organic Carrots</h4>
+              <small>Green Valley Acres</small>
+            </div>
+          </div>
+          <span class="badge badge-secondary">1 bunch</span>
+        </div>
+        <div class="box-row reveal delay-200">
+          <div class="box-row-main">
+            <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=160&auto=format&fit=crop" alt="Apples">
+            <div>
+              <h4>Fuji Apples</h4>
+              <small>Sunrise Orchard</small>
+            </div>
+          </div>
+          <span class="badge badge-secondary">3 lbs</span>
+        </div>
+      </div>
+      <div style="text-align: center; margin-block-start: var(--space-5);">
+        <a href="this-weeks-box.html" class="btn btn-primary">See All Items <i class="ph ph-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <!-- Participating Farms -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-header section-header--split reveal">
+          <div>
+            <span class="eyebrow">Our partners</span>
+            <h2>The growers behind your box</h2>
+          </div>
+          <a href="farms.html" class="btn btn-secondary">Meet All Farms <i class="ph ph-arrow-right"></i></a>
+        </div>
+        <div class="grid grid-3">
+          <article class="farm-card reveal">
+            <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=800&auto=format&fit=crop" alt="Farmer holding fresh carrots">
+            <div class="farm-card-body">
+              <span class="farm-card-tag"><i class="ph ph-carrot"></i> Root vegetables</span>
+              <h3>Green Valley Acres</h3>
+              <p>Specializing in heirloom tomatoes and root vegetables.</p>
+            </div>
+          </article>
+          <article class="farm-card reveal delay-100">
+            <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=800&auto=format&fit=crop" alt="Apples in an orchard">
+            <div class="farm-card-body">
+              <span class="farm-card-tag"><i class="ph ph-tree"></i> Orchard fruit</span>
+              <h3>Sunrise Orchard</h3>
+              <p>A fourth-generation family orchard.</p>
+            </div>
+          </article>
+          <article class="farm-card reveal delay-200">
+            <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=800&auto=format&fit=crop" alt="Microgreens growing">
+            <div class="farm-card-body">
+              <span class="farm-card-tag"><i class="ph ph-plant"></i> Microgreens</span>
+              <h3>Urban Roots Co.</h3>
+              <p>Pioneering sustainable urban farming.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Voices from the co-op</span>
+          <h2>Members <em>&amp;</em> growers agree</h2>
+          <p>Real stories from the households and farms that make up FarmCircle.</p>
+        </div>
+        <div class="testimonial-grid testimonial-grid--3">
+          <figure class="testimonial testimonial--small reveal">
+            <div class="testimonial-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <blockquote>"We cook more at home than ever. Knowing exactly which farm our carrots came from makes dinner feel special."</blockquote>
+            <figcaption class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=120&auto=format&fit=crop" alt="Priya K.">
+              <div><strong>Priya K.</strong><span>Family Box member</span></div>
+            </figcaption>
+          </figure>
+          <figure class="testimonial testimonial--small reveal delay-100">
+            <div class="testimonial-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <blockquote>"Selling through the co-op means we plan our season with confidence and waste almost nothing we grow."</blockquote>
+            <figcaption class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=120&auto=format&fit=crop" alt="Marcus T.">
+              <div><strong>Marcus T.</strong><span>Green Valley Acres</span></div>
+            </figcaption>
+          </figure>
+          <figure class="testimonial testimonial--small reveal delay-200">
+            <div class="testimonial-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <blockquote>"Skipping a week while traveling takes two taps. The flexibility is what keeps me subscribed."</blockquote>
+            <figcaption class="testimonial-author">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120&auto=format&fit=crop" alt="Sarah M.">
+              <div><strong>Sarah M.</strong><span>Subscriber since 2023</span></div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container">
+      <div class="cta-band reveal">
+        <span class="eyebrow">Start this week</span>
+        <h2>Ready to taste the difference?</h2>
+        <p>Your first box ships Thursday. No contracts, skip anytime.</p>
+        <div class="hero-actions">
+          <a href="subscription-plans.html" class="btn btn-light btn-lg">Choose Your Plan <i class="ph ph-arrow-right"></i></a>
+          <a href="contact.html" class="btn btn-ghost-light btn-lg">Talk to Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="nav-logo" style="margin-block-end: var(--space-3);">
+            <i class="ph ph-plant"></i> FarmCircle
+          </a>
+          <p>Connecting small-scale farms with community members through weekly curated produce boxes.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram" class="icon-btn"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="Facebook" class="icon-btn"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" aria-label="X" class="icon-btn"><i class="ph ph-x-logo"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <nav class="footer-links">
+            <a href="this-weeks-box.html">This Week's Box</a>
+            <a href="farms.html">Our Farm Partners</a>
+            <a href="subscription-plans.html">Plans &amp; Pricing</a>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <nav class="footer-links">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="dashboard.html">Dashboard</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Get seasonal updates and recipes.</p>
+          <!-- Mailchimp embed code comment -->
+          <!-- <form action="MAILCHIMP_URL" method="post"> -->
+          <form style="display: flex; gap: var(--space-2); width: 100%;">
+            <input type="email" placeholder="Your email" class="form-control" style="flex: 1;" aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-secondary" style="padding-inline: var(--space-4);">Join</button>
+          </form>
+          <!-- </form> -->
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FarmCircle Co-Op. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

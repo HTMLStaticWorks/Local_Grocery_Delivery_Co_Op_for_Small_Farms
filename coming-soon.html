@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmCircle - Coming Soon</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    .countdown {
+      display: flex;
+      gap: var(--space-4);
+      justify-content: center;
+      margin-block: var(--space-5);
+    }
+    .countdown-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--color-surface);
+      padding: var(--space-3) var(--space-4);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      min-width: 90px;
+    }
+    .countdown-number {
+      font-size: 2.5rem;
+      font-weight: var(--weight-h2);
+      color: var(--color-primary);
+      font-family: var(--font-heading);
+    }
+    .countdown-label {
+      font-size: var(--size-caption);
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body class="auth-page" style="flex-direction: column; text-align: center; background-image: url('https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center; position: relative; z-index: 1;">
+  
+  <div style="position: absolute; inset: 0; background: rgba(249, 246, 240, 0.9); z-index: -1;"></div>
+  <!-- Dark mode overlay -->
+  <style>
+    [data-theme="dark"] body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 25, 23, 0.9);
+      z-index: -1;
+    }
+  </style>
+
+  <div class="nav-logo" style="justify-content: center; margin-block-end: var(--space-4);"><i class="ph ph-plant"></i> FarmCircle</div>
+  
+  <h1 style="margin-block-end: var(--space-3);">We're expanding to your area!</h1>
+  <p class="lead-text" style="color: var(--color-text-muted); max-width: 500px;">Our local farm delivery co-op is coming to a new neighborhood soon. Get ready for the freshest produce.</p>
+  
+  <div class="countdown">
+    <div class="countdown-item">
+      <span class="countdown-number" id="days">14</span>
+      <span class="countdown-label">Days</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number" id="hours">08</span>
+      <span class="countdown-label">Hours</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number" id="mins">45</span>
+      <span class="countdown-label">Mins</span>
+    </div>
+    <div class="countdown-item">
+      <span class="countdown-number" id="secs">30</span>
+      <span class="countdown-label">Secs</span>
+    </div>
+  </div>
+
+  <div style="background: var(--color-surface); padding: var(--space-5); border-radius: var(--border-radius); box-shadow: var(--shadow); max-width: 500px; width: 100%;">
+    <h3 style="margin-block-end: var(--space-2);">Be the first to know</h3>
+    <p class="caption" style="margin-block-end: var(--space-4);">Sign up to get notified when deliveries start in your zip code.</p>
+    <form style="display: flex; gap: var(--space-2); width: 100%;">
+      <input type="email" placeholder="Your email address" class="form-control" required style="flex: 1;">
+      <button type="submit" class="btn btn-primary" style="padding-inline: var(--space-4);">Notify Me</button>
+    </form>
+  </div>
+
+  <div style="position: absolute; top: var(--space-4); inset-inline-end: var(--space-4);">
+    <button class="icon-btn theme-toggle"><i class="ph ph-moon"></i></button>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Simple dummy countdown
+    const countDownDate = new Date().getTime() + (14 * 24 * 60 * 60 * 1000) + (8 * 60 * 60 * 1000) + (45 * 60 * 1000);
+    
+    const x = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+        
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      document.getElementById("days").innerHTML = days < 10 ? '0' + days : days;
+      document.getElementById("hours").innerHTML = hours < 10 ? '0' + hours : hours;
+      document.getElementById("mins").innerHTML = minutes < 10 ? '0' + minutes : minutes;
+      document.getElementById("secs").innerHTML = seconds < 10 ? '0' + seconds : seconds;
+        
+      if (distance < 0) {
+        clearInterval(x);
+        document.querySelector(".countdown").innerHTML = "<h3>We have arrived!</h3>";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

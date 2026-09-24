@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmCircle - Dashboard</title>
+  <meta name="description" content="Manage your FarmCircle subscription.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body>
+  <header class="dash-topbar">
+    <div class="dash-topbar-brand">
+      <button class="icon-btn dash-menu-toggle" aria-label="Open menu" aria-expanded="false"><i
+          class="ph ph-list"></i></button>
+      <a href="index.html" class="dash-logo"><i class="ph ph-plant"></i> FarmCircle</a>
+    </div>
+    <div class="dash-topbar-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle direction"><i class="ph ph-arrows-left-right"></i></button>
+      <div class="dash-profile">
+        <button class="dash-avatar" aria-label="Account menu" aria-expanded="false"><i class="ph ph-user"></i></button>
+        <div class="dash-profile-menu">
+          <a href="#profile-settings" class="dash-profile-link"><i class="ph ph-gear"></i> Profile / Settings</a>
+          <a href="#" id="logoutBtn"><i class="ph ph-sign-out"></i> Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="dash-sidebar-overlay"></div>
+
+  <main class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <a href="#overview" class="active"><i class="ph ph-squares-four"></i> Overview</a>
+      <a href="#this-weeks-box"><i class="ph ph-package"></i> This Week's Box</a>
+      <a href="#customize-box"><i class="ph ph-swap"></i> Customize Box</a>
+      <a href="#delivery-schedule"><i class="ph ph-calendar"></i> Delivery Schedule</a>
+      <a href="#manage-subscription"><i class="ph ph-arrows-clockwise"></i> Manage Subscription</a>
+      <a href="#payment-history"><i class="ph ph-credit-card"></i> Payment History</a>
+      <a href="#profile-settings"><i class="ph ph-user"></i> Profile / Settings</a>
+      <a href="index.html" class="sidebar-logout"><i class="ph ph-sign-out"></i> Logout</a>
+    </aside>
+
+    <!-- Content -->
+    <div class="dashboard-content">
+      <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0;">
+
+        <!-- Section: Overview -->
+        <section id="overview" class="dashboard-section">
+          <h2>Welcome back, Sarah!</h2>
+          <p class="lead-text" style="margin-block-end: var(--space-5);">Here's the latest on your FarmCircle co-op box.
+          </p>
+
+          <div class="grid grid-3" style="margin-block-end: var(--space-6);">
+            <div class="card" style="padding: var(--space-4);">
+              <p class="caption">Subscription Status</p>
+              <h3 style="margin-block-start: var(--space-2); margin-block-end: var(--space-2);"><span id="subStatus"
+                  class="badge badge-primary">Active</span></h3>
+              <p>Family Box (Weekly)</p>
+            </div>
+            <div class="card" style="padding: var(--space-4);">
+              <p class="caption">Next Delivery</p>
+              <h3 style="margin-block-start: var(--space-2); margin-block-end: var(--space-2);">Oct 6</h3>
+              <p>Estimated: 2PM - 5PM</p>
+            </div>
+            <div class="card" style="padding: var(--space-4);">
+              <p class="caption">Customization Window</p>
+              <h3
+                style="margin-block-start: var(--space-2); margin-block-end: var(--space-2); color: var(--color-secondary);">
+                Closes Soon</h3>
+              <p>Ends Thursday at 8PM</p>
+            </div>
+          </div>
+          <div class="card"
+            style="text-align: center; align-items: center; padding: var(--space-5); background: var(--color-primary); color: #fff;">
+            <h3 style="color: #fff;">Customization is Open!</h3>
+            <p style="color: rgba(255,255,255,0.9); margin-block-end: var(--space-4);">You have 3 swaps available for
+              this week's Family Box.</p>
+            <button class="btn" style="background: #fff; color: var(--color-primary);"
+              onclick="document.querySelector('a[href=\'#customize-box\']').click();">Customize Now</button>
+          </div>
+        </section>
+
+        <!-- Section: This Week's Box -->
+        <section id="this-weeks-box" class="dashboard-section" style="display: none;">
+          <h2 style="margin-block-end: var(--space-5);">This Week's Box</h2>
+          <div class="grid grid-3">
+            <div class="card" style="padding: var(--space-3);">
+              <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=400&auto=format&fit=crop"
+                alt="Potatoes" style="aspect-ratio: 1; margin-block-end: var(--space-2);">
+              <h4>Heirloom Potatoes</h4>
+              <p class="caption">2 lbs</p>
+            </div>
+            <div class="card" style="padding: var(--space-3);">
+              <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=400&auto=format&fit=crop"
+                alt="Carrots" style="aspect-ratio: 1; margin-block-end: var(--space-2);">
+              <h4>Organic Carrots</h4>
+              <p class="caption">1 bunch</p>
+            </div>
+            <div class="card" style="padding: var(--space-3);">
+              <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=400&auto=format&fit=crop"
+                alt="Apples" style="aspect-ratio: 1; margin-block-end: var(--space-2);">
+              <h4>Fuji Apples</h4>
+              <p class="caption">3 lbs</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Customize Box -->
+        <section id="customize-box" class="dashboard-section" style="display: none;">
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; margin-block-end: var(--space-5);">
+            <h2>Customize Your Box</h2>
+            <span class="badge badge-secondary">3 Swaps Remaining</span>
+          </div>
+          <p style="margin-block-end: var(--space-4);">Click 'Remove' on an item to swap it out, then choose a
+            replacement from the available harvest.</p>
+
+          <h4 style="margin-block-end: var(--space-3);">Current Selection</h4>
+          <div class="grid swap-grid" style="margin-block-end: var(--space-6);">
+            <div class="card" style="padding: var(--space-3);">
+              <img src="https://images.unsplash.com/photo-1524593166156-312f362cada0?q=80&w=400&auto=format&fit=crop"
+                alt="Tomatoes" style="aspect-ratio: 1; margin-block-end: var(--space-2);">
+              <h3 style="font-size: 1rem;">Heirloom Tomatoes</h3>
+              <button class="btn btn-primary swap-btn"
+                style="padding: 4px 8px; width: 100%; margin-block-start: var(--space-2);">Remove</button>
+            </div>
+            <div class="card" style="padding: var(--space-3);">
+              <img src="https://images.unsplash.com/photo-1557844352-761f2565b576?q=80&w=400&auto=format&fit=crop"
+                alt="Beets" style="aspect-ratio: 1; margin-block-end: var(--space-2);">
+              <h3 style="font-size: 1rem;">Red Beets</h3>
+              <button class="btn btn-primary swap-btn"
+                style="padding: 4px 8px; width: 100%; margin-block-start: var(--space-2);">Remove</button>
+            </div>
+            <div class="card" style="padding: var(--space-3);">
+              <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=400&auto=format&fit=crop"
+                alt="Carrots" style="aspect-ratio: 1; margin-block-end: var(--space-2);">
+              <h3 style="font-size: 1rem;">Rainbow Carrots</h3>
+              <button class="btn btn-primary swap-btn"
+                style="padding: 4px 8px; width: 100%; margin-block-start: var(--space-2);">Remove</button>
+            </div>
+          </div>
+
+          <h4 style="margin-block-end: var(--space-3);">Available to Add</h4>
+          <div class="grid swap-grid">
+            <div class="card" style="padding: var(--space-3); opacity: 0.8;">
+              <img src="https://images.unsplash.com/photo-1506917728037-b6af01a7d403?q=80&w=400&auto=format&fit=crop"
+                alt="Pumpkin" style="aspect-ratio: 1; margin-block-end: var(--space-2);">
+              <h3 style="font-size: 1rem;">Sugar Pie Pumpkin</h3>
+              <button class="btn btn-secondary swap-btn"
+                style="padding: 4px 8px; width: 100%; margin-block-start: var(--space-2);">Add to Box</button>
+            </div>
+            <div class="card" style="padding: var(--space-3); opacity: 0.8;">
+              <img src="https://images.unsplash.com/photo-1566842600175-97dca489844f?q=80&w=400&auto=format&fit=crop"
+                alt="Cauliflower" style="aspect-ratio: 1; margin-block-end: var(--space-2);">
+              <h3 style="font-size: 1rem;">Cauliflower</h3>
+              <button class="btn btn-secondary swap-btn"
+                style="padding: 4px 8px; width: 100%; margin-block-start: var(--space-2);">Add to Box</button>
+            </div>
+            <div class="card" style="padding: var(--space-3); opacity: 0.8;">
+              <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=400&auto=format&fit=crop"
+                alt="Potatoes" style="aspect-ratio: 1; margin-block-end: var(--space-2);">
+              <h3 style="font-size: 1rem;">Yukon Gold Potatoes</h3>
+              <button class="btn btn-secondary swap-btn"
+                style="padding: 4px 8px; width: 100%; margin-block-start: var(--space-2);">Add to Box</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Delivery Schedule -->
+        <section id="delivery-schedule" class="dashboard-section" style="display: none;">
+          <h2 style="margin-block-end: var(--space-5);">Delivery Schedule</h2>
+          <div class="card" style="padding: 0; overflow: hidden; align-items: stretch; text-align: start;">
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Box Type</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Oct 6, 2026</td>
+                    <td><span class="badge badge-primary">Scheduled</span></td>
+                    <td>Family Box</td>
+                    <td><button class="btn btn-secondary" style="padding: 4px 8px;">Skip</button></td>
+                  </tr>
+                  <tr>
+                    <td>Oct 13, 2026</td>
+                    <td><span class="badge badge-primary">Scheduled</span></td>
+                    <td>Family Box</td>
+                    <td><button class="btn btn-secondary" style="padding: 4px 8px;">Skip</button></td>
+                  </tr>
+                  <tr>
+                    <td>Sep 29, 2026</td>
+                    <td><span class="badge badge-secondary"
+                        style="background: var(--color-text-muted);">Delivered</span></td>
+                    <td>Family Box</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Manage Subscription -->
+        <section id="manage-subscription" class="dashboard-section" style="display: none;">
+          <h2 style="margin-block-end: var(--space-5);">Manage Subscription</h2>
+          <div class="card"
+            style="text-align: start; align-items: flex-start; padding: var(--space-5); margin-block-end: var(--space-4);">
+            <h3>Current Plan: Family Box</h3>
+            <p style="margin-block-end: var(--space-4);">$55 / week • Weekly Delivery</p>
+            <div class="plan-actions">
+              <button class="btn btn-secondary">Change Plan</button>
+              <button class="btn btn-secondary" id="pauseBtn" data-paused="false">Pause Subscription</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Payment History -->
+        <section id="payment-history" class="dashboard-section" style="display: none;">
+          <h2 style="margin-block-end: var(--space-5);">Payment History</h2>
+          <div class="card" style="padding: 0; overflow: hidden; align-items: stretch; text-align: start;">
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Invoice</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sep 29, 2026</td>
+                    <td>Family Box (Weekly)</td>
+                    <td>$55.00</td>
+                    <td><span class="badge badge-primary">Paid</span></td>
+                    <td><a href="#" class="invoice-link"><i class="ph ph-download-simple"></i> Download</a></td>
+                  </tr>
+                  <tr>
+                    <td>Sep 22, 2026</td>
+                    <td>Family Box (Weekly)</td>
+                    <td>$55.00</td>
+                    <td><span class="badge badge-primary">Paid</span></td>
+                    <td><a href="#" class="invoice-link"><i class="ph ph-download-simple"></i> Download</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Section: Profile / Settings -->
+        <section id="profile-settings" class="dashboard-section" style="display: none;">
+          <h2 style="margin-block-end: var(--space-5);">Profile & Settings</h2>
+          <form class="card" style="text-align: start; align-items: stretch; padding: var(--space-5);">
+            <div class="form-group">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" value="Sarah Miller">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" value="sarah@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Delivery Address</label>
+              <textarea class="form-control" rows="3">123 Maple Street&#10;Apt 4B&#10;City Center, ST 12345</textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Delivery Instructions</label>
+              <input type="text" class="form-control" value="Leave on the front porch behind the planter.">
+            </div>
+            <button type="button" class="btn btn-primary" style="align-self: flex-start;">Save Changes</button>
+          </form>
+        </section>
+
+      </div>
+    </div>
+  </main>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

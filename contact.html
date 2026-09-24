@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmCircle - Contact Us</title>
+  <meta name="description" content="Get in touch with the FarmCircle team.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo"><i class="ph ph-plant"></i> FarmCircle</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="home2.html">Home 2</a>
+        <a href="this-weeks-box.html">This Week's Box</a>
+        <a href="farms.html">Farms We Partner With</a>
+        <a href="subscription-plans.html">Subscription</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle"><i class="ph ph-moon"></i></button>
+        <button class="icon-btn rtl-toggle"><i class="ph ph-arrows-left-right"></i></button>
+        <a href="login.html" class="btn btn-primary auth-link desktop-auth">Login</a>
+      </div>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="drawer-overlay"></div>
+  <aside class="nav-drawer">
+    <a href="index.html" class="nav-logo drawer-logo"><i class="ph ph-plant"></i> FarmCircle</a>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="this-weeks-box.html">This Week's Box</a>
+      <a href="farms.html">Farms We Partner With</a>
+      <a href="subscription-plans.html">Subscription</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+    <div class="drawer-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="ph ph-moon"></i>
+      </button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+      <a href="login.html" class="btn btn-primary auth-link drawer-login">Login</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-floats" aria-hidden="true">
+        <span class="float-item f1"><i class="ph-fill ph-leaf"></i></span>
+        <span class="float-item f2"><i class="ph-fill ph-carrot"></i></span>
+        <span class="float-item f3"><i class="ph-fill ph-orange-slice"></i></span>
+        <span class="float-item f4"><i class="ph-fill ph-plant"></i></span>
+        <span class="float-item f5"><i class="ph-fill ph-pepper"></i></span>
+        <span class="float-item f6"><i class="ph-fill ph-grains"></i></span>
+        <span class="float-blob b1"></span>
+        <span class="float-blob b2"></span>
+      </div>
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <span class="eyebrow">Contact us</span>
+          <h1>Get in Touch</h1>
+          <p class="lead-text">Have questions about our co-op, deliveries, or farm partners? We'd love to hear from you.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+
+      <div class="grid grid-2" style="align-items: start;">
+        <!-- Contact Form -->
+        <div class="card" style="align-items: stretch; text-align: start;">
+          <h3 style="margin-block-end: var(--space-4);">Send us a message</h3>
+          <!-- Formspree placeholder -->
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Info & Map -->
+        <div style="display: flex; flex-direction: column; gap: var(--space-5);">
+          <div>
+            <h3>Contact Details</h3>
+            <ul style="margin-block-start: var(--space-3); display: flex; flex-direction: column; gap: var(--space-3);">
+              <li style="display: flex; align-items: center; gap: var(--space-2);"><i class="ph ph-envelope" style="color: var(--color-primary); font-size: 1.25rem;"></i> hello@farmcirclecoop.local</li>
+              <li style="display: flex; align-items: center; gap: var(--space-2);"><i class="ph ph-phone" style="color: var(--color-primary); font-size: 1.25rem;"></i> (555) 123-4567</li>
+              <li style="display: flex; align-items: flex-start; gap: var(--space-2);"><i class="ph ph-map-pin" style="color: var(--color-primary); font-size: 1.25rem; margin-top: 4px;"></i> <div>123 Market Street<br>Suite 200<br>City Center, ST 12345</div></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Follow Us</h3>
+            <div class="social-links" style="margin-block-start: var(--space-3);">
+              <a href="#" aria-label="Instagram" class="icon-btn social-btn"><i class="ph ph-instagram-logo"></i></a>
+              <a href="#" aria-label="Facebook" class="icon-btn social-btn"><i class="ph ph-facebook-logo"></i></a>
+              <a href="#" aria-label="X" class="icon-btn social-btn"><i class="ph ph-x-logo"></i></a>
+            </div>
+          </div>
+          <div class="contact-map">
+            <iframe title="FarmCircle location map" src="https://www.openstreetmap.org/export/embed.html?bbox=-89.6700%2C39.7800%2C-89.6300%2C39.8150&amp;layer=mapnik&amp;marker=39.7980%2C-89.6500" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a class="contact-map-link" href="https://www.openstreetmap.org/?mlat=39.7980&amp;mlon=-89.6500#map=15/39.7980/-89.6500" target="_blank" rel="noopener"><i class="ph ph-arrow-square-out"></i> Open larger map</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="nav-logo" style="margin-block-end: var(--space-3);">
+            <i class="ph ph-plant"></i> FarmCircle
+          </a>
+          <p>Connecting small-scale farms with community members through weekly curated produce boxes.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram" class="icon-btn"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="Facebook" class="icon-btn"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" aria-label="X" class="icon-btn"><i class="ph ph-x-logo"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <nav class="footer-links">
+            <a href="this-weeks-box.html">This Week's Box</a>
+            <a href="farms.html">Our Farm Partners</a>
+            <a href="subscription-plans.html">Plans &amp; Pricing</a>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <nav class="footer-links">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="dashboard.html">Dashboard</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Get seasonal updates and recipes.</p>
+          <!-- Mailchimp embed code comment -->
+          <!-- <form action="MAILCHIMP_URL" method="post"> -->
+          <form style="display: flex; gap: var(--space-2); width: 100%;">
+            <input type="email" placeholder="Your email" class="form-control" style="flex: 1;" aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-secondary" style="padding-inline: var(--space-4);">Join</button>
+          </form>
+          <!-- </form> -->
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FarmCircle Co-Op. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initFormValidation('contactForm');
+    });
+  </script>
+</body>
+</html>
