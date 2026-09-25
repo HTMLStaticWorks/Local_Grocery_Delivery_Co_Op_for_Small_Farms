@@ -72,6 +72,22 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.addEventListener('click', toggleDrawer);
   }
 
+  // Close button inside the drawer
+  if (drawer) {
+    const drawerClose = document.createElement('button');
+    drawerClose.type = 'button';
+    drawerClose.className = 'drawer-close';
+    drawerClose.setAttribute('aria-label', 'Close menu');
+    drawerClose.innerHTML = '<i class="ph ph-x"></i>';
+    drawer.prepend(drawerClose);
+    drawerClose.addEventListener('click', () => {
+      if (drawer.classList.contains('open')) toggleDrawer();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) toggleDrawer();
+    });
+  }
+
   // Close drawer when link clicked
   const drawerLinks = document.querySelectorAll('.drawer-links a');
   drawerLinks.forEach(link => {
@@ -129,6 +145,21 @@ document.addEventListener('DOMContentLoaded', () => {
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
   }
+
+  // --- Back to top ---
+  const backToTop = document.createElement('button');
+  backToTop.type = 'button';
+  backToTop.className = 'back-to-top';
+  backToTop.setAttribute('aria-label', 'Back to top');
+  backToTop.innerHTML = '<i class="ph ph-arrow-up"></i>';
+  document.body.appendChild(backToTop);
+  const toggleBackToTop = () => backToTop.classList.toggle('show', window.scrollY > 400);
+  toggleBackToTop();
+  window.addEventListener('scroll', toggleBackToTop, { passive: true });
+  backToTop.addEventListener('click', () => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  });
 
   // --- Scroll reveal ---
   const revealEls = document.querySelectorAll('.reveal');

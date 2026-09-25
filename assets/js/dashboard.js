@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
             s.style.display = 'none';
           }
         });
+
+        // Start the newly shown section from the top
+        window.scrollTo({ top: 0, behavior: 'instant' });
       });
     });
   }
