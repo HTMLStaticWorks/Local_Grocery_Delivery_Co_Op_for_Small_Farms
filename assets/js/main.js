@@ -186,9 +186,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Count-up stats ---
   document.querySelectorAll('[data-count]').forEach(el => {
-    const target = parseInt(el.dataset.count, 10);
+    const target = parseFloat(el.dataset.count);
+    const prefix = el.dataset.prefix || '';
     const suffix = el.dataset.suffix || '';
-    animateNumber(el, 0, target, 1800, v => Math.round(v).toLocaleString() + suffix);
+    const decimals = parseInt(el.dataset.decimals || '0', 10);
+    animateNumber(el, 0, target, 1800, v => prefix + v.toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) + suffix);
   });
 
   // --- FAQ accordion: keep one open at a time ---

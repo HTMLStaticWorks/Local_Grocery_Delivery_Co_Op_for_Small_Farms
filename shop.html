@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmCircle - Shop Local Groceries</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <meta name="description"
+    content="Shop fresh produce from local partner farms. Browse categories, best sellers and new arrivals, and order for doorstep delivery.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo"><i class="ph ph-plant"></i> FarmCircle</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="home2.html">Home 2</a>
+        <a href="about.html">About</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="this-weeks-box.html">This Week's Box</a>
+        <a href="farms.html">Farms</a>
+        <a href="subscription-plans.html">Subscription</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle"><i class="ph ph-moon"></i></button>
+        <button class="icon-btn rtl-toggle"><i class="ph ph-arrows-left-right"></i></button>
+        <a href="login.html" class="btn btn-primary auth-link desktop-auth">Login</a>
+      </div>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="drawer-overlay"></div>
+  <aside class="nav-drawer">
+    <a href="index.html" class="nav-logo drawer-logo"><i class="ph ph-plant"></i> FarmCircle</a>
+    <nav class="drawer-links">
+      <a href="index.html">Home</a>
+      <a href="home2.html">Home 2</a>
+      <a href="about.html">About</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="this-weeks-box.html">This Week's Box</a>
+      <a href="farms.html">Farms</a>
+      <a href="subscription-plans.html">Subscription</a>
+      <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+    <div class="drawer-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="ph ph-moon"></i>
+      </button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+      <a href="login.html" class="btn btn-primary auth-link drawer-login">Login</a>
+    </div>
+  </aside>
+
+  <main data-shop>
+    <section class="page-hero">
+      <div class="page-hero-floats" aria-hidden="true">
+        <span class="float-item f1"><i class="ph-fill ph-leaf"></i></span>
+        <span class="float-item f2"><i class="ph-fill ph-carrot"></i></span>
+        <span class="float-item f3"><i class="ph-fill ph-orange-slice"></i></span>
+        <span class="float-item f4"><i class="ph-fill ph-plant"></i></span>
+        <span class="float-item f5"><i class="ph-fill ph-pepper"></i></span>
+        <span class="float-item f6"><i class="ph-fill ph-grains"></i></span>
+        <span class="float-blob b1"></span>
+        <span class="float-blob b2"></span>
+      </div>
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <span class="eyebrow">Farm shop</span>
+          <h1>Shop Local Groceries</h1>
+          <p class="lead-text">Order fresh produce from our partner farms. No subscription needed, and free delivery
+            on orders over $35.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="container" id="categories">
+      <div class="section-header reveal">
+        <span class="eyebrow">Product categories</span>
+        <h2>Browse by <em>category</em></h2>
+        <p>Pick a category to filter the farm shop below.</p>
+      </div>
+      <div class="category-grid" data-category-grid></div>
+    </section>
+
+    <!-- Local Farm Products -->
+    <section class="section-alt" id="products">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Local farm products</span>
+          <h2>Fresh from the <em>field</em> this week</h2>
+          <p>Every item is grown by a FarmCircle partner farm within 25 miles and harvested to order.</p>
+        </div>
+
+        <div class="shop-toolbar">
+          <label class="shop-search">
+            <i class="ph ph-magnifying-glass"></i>
+            <input type="search" class="form-control" placeholder="Search produce or farms" aria-label="Search products"
+              data-filter-search>
+          </label>
+          <select class="form-control" aria-label="Filter by farm" data-filter-farm>
+            <option value="all">All farms</option>
+          </select>
+          <select class="form-control" aria-label="Sort products" data-filter-sort>
+            <option value="featured">Sort: Featured</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+            <option value="name">Name: A to Z</option>
+          </select>
+          <label class="stock-toggle"><input type="checkbox" data-filter-stock> In stock only</label>
+          <button type="button" class="btn btn-primary shop-cart-btn" data-cart-open>
+            <i class="ph ph-shopping-cart-simple"></i> Cart <span class="cart-count" data-cart-count>0</span>
+          </button>
+        </div>
+
+        <div class="shop-chips" role="group" aria-label="Filter by category" data-category-chips></div>
+        <p class="shop-results" aria-live="polite" data-results-count></p>
+        <div class="product-grid" data-product-grid></div>
+      </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="container" id="best-sellers">
+      <div class="section-header section-header--split reveal">
+        <div>
+          <span class="eyebrow">Best sellers</span>
+          <h2>Member <em>favorites</em></h2>
+          <p>The items our members reorder week after week.</p>
+        </div>
+      </div>
+      <div class="product-grid product-grid--3" data-best-grid></div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="section-alt" id="new-arrivals">
+      <div class="container">
+        <div class="section-header section-header--split reveal">
+          <div>
+            <span class="eyebrow">New arrivals</span>
+            <h2>Just <em>harvested</em></h2>
+            <p>Seasonal newcomers that joined the shop this week.</p>
+          </div>
+        </div>
+        <div class="product-grid product-grid--3" data-new-grid></div>
+      </div>
+    </section>
+
+    <!-- Product Details -->
+    <section class="container" id="product-details">
+      <div class="section-header reveal">
+        <span class="eyebrow">Product details</span>
+        <h2>Know exactly what <em>you're buying</em></h2>
+        <p>Every product comes with its farm, harvest day, growing practice and storage tips. Choose "Details" on any
+          item to see it here.</p>
+      </div>
+      <div class="product-detail reveal" data-spotlight></div>
+    </section>
+
+    <!-- Product Availability -->
+    <section class="section-alt" id="availability">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Product availability</span>
+          <h2>When your order <em>arrives</em></h2>
+          <p>Farms harvest to order, so stock changes daily. Here's how ordering and delivery work.</p>
+        </div>
+        <div class="availability-grid">
+          <div class="availability-card reveal">
+            <div class="card-icon"><i class="ph ph-timer"></i></div>
+            <h3>Next order cutoff</h3>
+            <p class="countdown" data-cutoff-countdown>--</p>
+            <p data-cutoff-label>Order by 8 PM for the next delivery.</p>
+          </div>
+          <div class="availability-card reveal delay-100">
+            <div class="card-icon card-icon--accent"><i class="ph ph-truck"></i></div>
+            <h3>Delivery days</h3>
+            <p><strong>Wednesday</strong> (order by Monday 8 PM) and <strong>Saturday</strong> (order by Thursday 8
+              PM). Free over $35, otherwise $4.99.</p>
+          </div>
+          <div class="availability-card reveal delay-200">
+            <div class="card-icon"><i class="ph ph-calendar-plus"></i></div>
+            <h3>Coming next week</h3>
+            <p>Expected from our farms as the season turns:</p>
+            <div class="coming-list">
+              <span class="badge">Butternut Squash</span>
+
+              <span class="badge">Kale</span>
+            </div>
+          </div>
+        </div>
+        <ul class="stock-legend" aria-label="Stock status legend">
+          <li><span class="stock-status in">In stock</span> Ready to harvest for your delivery</li>
+          <li><span class="stock-status low">Low stock</span> Only a few left this week</li>
+          <li><span class="stock-status out">Sold out</span> Back with the next harvest</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container">
+      <div class="cta-band reveal">
+        <span class="eyebrow">Eat local every week</span>
+        <h2>Love these? Get them every week</h2>
+        <p>Members get a curated farm box at their door weekly, save 10% and can still add shop extras anytime.</p>
+        <div class="hero-actions">
+          <a href="subscription-plans.html" class="btn btn-light btn-lg">Choose a Subscription <i
+              class="ph ph-arrow-right"></i></a>
+          <a href="index.html#build-your-box" class="btn btn-ghost-light btn-lg">Build Your Own Box</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating cart button -->
+  <button type="button" class="cart-fab" aria-label="Open cart" data-cart-open>
+    <i class="ph ph-shopping-cart-simple"></i>
+    <span class="cart-count" data-cart-count>0</span>
+  </button>
+
+  <!-- Cart drawer -->
+  <div class="cart-overlay" data-cart-close></div>
+  <aside class="cart-drawer" aria-label="Shopping cart" aria-hidden="true" data-cart-drawer>
+    <div class="cart-head">
+      <h2>Your Cart</h2>
+      <button type="button" class="modal-close" aria-label="Close cart" data-cart-close><i class="ph ph-x"></i></button>
+    </div>
+    <div class="cart-body" data-cart-body></div>
+    <div class="cart-foot" data-cart-foot>
+      <div class="cart-line"><span>Subtotal</span><span data-cart-subtotal>$0.00</span></div>
+      <div class="cart-line"><span>Delivery</span><span data-cart-delivery>$0.00</span></div>
+      <p class="caption" data-cart-free-note></p>
+      <div class="cart-progress"><span data-cart-progress style="width: 0%;"></span></div>
+      <div class="cart-line total"><span>Total</span><span data-cart-total>$0.00</span></div>
+      <button type="button" class="btn btn-primary btn-lg" data-checkout>Order Now <i
+          class="ph ph-arrow-right"></i></button>
+    </div>
+  </aside>
+
+  <!-- Product quick view -->
+  <dialog class="product-modal" aria-label="Product details" data-product-modal>
+    <button type="button" class="modal-close" aria-label="Close details" data-modal-close><i
+        class="ph ph-x"></i></button>
+    <div class="product-detail" data-modal-body></div>
+  </dialog>
+
+  <div class="shop-toast" role="status" aria-live="polite" data-toast></div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="nav-logo" style="margin-block-end: var(--space-3);">
+            <i class="ph ph-plant"></i> FarmCircle
+          </a>
+          <p>Connecting small-scale farms with community members through weekly curated produce boxes.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram" class="icon-btn"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="Facebook" class="icon-btn"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" aria-label="X" class="icon-btn"><i class="ph ph-x-logo"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <nav class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="shop.html">Shop Groceries</a>
+            <a href="this-weeks-box.html">This Week's Box</a>
+            <a href="farms.html">Our Farm Partners</a>
+            <a href="subscription-plans.html">Plans &amp; Pricing</a>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <nav class="footer-links">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="dashboard.html">Dashboard</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Get seasonal updates and recipes.</p>
+          <!-- Mailchimp embed code comment -->
+          <!-- <form action="MAILCHIMP_URL" method="post"> -->
+          <form style="display: flex; gap: var(--space-2); width: 100%;">
+            <input type="email" placeholder="Your email" class="form-control" style="flex: 1;"
+              aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-secondary" style="padding-inline: var(--space-4);">Join</button>
+          </form>
+          <!-- </form> -->
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FarmCircle Co-Op. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/shop.js"></script>
+</body>
+
+</html>
